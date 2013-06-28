@@ -16,7 +16,6 @@
 		414A9AAB16FAEA48009EE994 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 414A9AA716FAEA48009EE994 /* main.m */; };
 		414A9AAF16FAEA9E009EE994 /* LAbstractSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 414A9AAE16FAEA9E009EE994 /* LAbstractSearchViewController.m */; };
 		414A9AB416FAEB5D009EE994 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 414A9AB216FAEB5D009EE994 /* DataController.m */; };
-		414A9ACB16FAEE38009EE994 /* NSManagedObject+NewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 414A9ACA16FAEE38009EE994 /* NSManagedObject+NewObject.m */; };
 		414A9AD416FAEFC6009EE994 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 414A9AD216FAEFC6009EE994 /* MainViewController.m */; };
 		414A9AD516FAEFC6009EE994 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 414A9AD316FAEFC6009EE994 /* MainViewController.xib */; };
 		41873C90177CAC1000B36328 /* LargeDataSetSample.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 41873C8F177CAC1000B36328 /* LargeDataSetSample.sqlite */; };
@@ -40,8 +39,6 @@
 		414A9AAE16FAEA9E009EE994 /* LAbstractSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LAbstractSearchViewController.m; sourceTree = "<group>"; };
 		414A9AB116FAEB5D009EE994 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
 		414A9AB216FAEB5D009EE994 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
-		414A9AC916FAEE38009EE994 /* NSManagedObject+NewObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+NewObject.h"; sourceTree = "<group>"; };
-		414A9ACA16FAEE38009EE994 /* NSManagedObject+NewObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+NewObject.m"; sourceTree = "<group>"; };
 		414A9AD116FAEFC6009EE994 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		414A9AD216FAEFC6009EE994 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		414A9AD316FAEFC6009EE994 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -112,7 +109,6 @@
 				414A9AB016FAEB5D009EE994 /* DataController */,
 				414A9AAC16FAEA9E009EE994 /* LAbstractSearchViewController */,
 				414A9AB316FAEB5D009EE994 /* ManagedObject */,
-				414A9AC816FAEE38009EE994 /* ClassExtensions */,
 				419ECB7016FE5DBA00F0816E /* SimpleLoadingView */,
 			);
 			path = Classes;
@@ -164,15 +160,6 @@
 				4199AE011718328D00B7D09B /* Contact.m */,
 			);
 			path = ManagedObject;
-			sourceTree = "<group>";
-		};
-		414A9AC816FAEE38009EE994 /* ClassExtensions */ = {
-			isa = PBXGroup;
-			children = (
-				414A9AC916FAEE38009EE994 /* NSManagedObject+NewObject.h */,
-				414A9ACA16FAEE38009EE994 /* NSManagedObject+NewObject.m */,
-			);
-			path = ClassExtensions;
 			sourceTree = "<group>";
 		};
 		414A9AD016FAEFB1009EE994 /* MainViewController */ = {
@@ -261,7 +248,6 @@
 				414A9AAB16FAEA48009EE994 /* main.m in Sources */,
 				414A9AAF16FAEA9E009EE994 /* LAbstractSearchViewController.m in Sources */,
 				414A9AB416FAEB5D009EE994 /* DataController.m in Sources */,
-				414A9ACB16FAEE38009EE994 /* NSManagedObject+NewObject.m in Sources */,
 				414A9AD416FAEFC6009EE994 /* MainViewController.m in Sources */,
 				419ECB7316FE5DF000F0816E /* SimpleLoadingView.m in Sources */,
 				4199AE021718328D00B7D09B /* Contact.m in Sources */,
