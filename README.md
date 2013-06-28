@@ -8,12 +8,12 @@ This is a sample application that uses Core Data and NSFetchedResultsController 
 LAbstractSearchViewController
 -----------------------------
 
-LAbstractSearchViewController is intended to be subclassed to override getters and adjust the data to be displayed. Check the MainViewController class for more details.
+LAbstractSearchViewController is intended to be subclassed to override getters and adjust the data to be displayed.
 
 MainViewController
 ------------------
 
-MainViewController extends the LAbstractSearchViewController class in order to override protected getters and display managed objects.
+MainViewController extends the LAbstractSearchViewController class in order to override protected getters and display managed objects in a table.
 
 DataController
 --------------
