@@ -1,12 +1,3 @@
-//
-//  DataController.m
-//  LionsClub
-//
-//  Created by Luka Gabric on 3/15/13.
-//
-//
-
-
 #import "DataController.h"
 #import <CoreData/CoreData.h>
 
@@ -71,6 +62,7 @@
     
     return _managedObjectContext;
 }
+
 
 // Returns the managed object model for the application.
 // If the model doesn't already exist, it is created from the application's model.

@@ -1,12 +1,3 @@
-//
-//  DataController.h
-//  LionsClub
-//
-//  Created by Luka Gabric on 3/15/13.
-//
-//
-
-
 #define dataContext [[DataController sharedDataController] managedObjectContext]
 #define saveDataContext [[DataController sharedDataController] saveContext]
 

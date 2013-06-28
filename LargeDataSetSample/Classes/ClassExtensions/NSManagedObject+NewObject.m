@@ -1,12 +1,3 @@
-//
-//  NSManagedObject+NewObject.m
-//  LionsClub
-//
-//  Created by Luka Gabric on 3/18/13.
-//
-//
-
-
 #import "NSManagedObject+NewObject.h"
 #import "DataController.h"
 
