@@ -1,7 +1,7 @@
 LargeDatasetSample
 ==================
 
-This is a sample application that uses Core Data and NSFetchedResultsController to display dataset of 50 000 items. It is similar to Contacts of the Phone application.
+This is a sample application that uses Core Data and NSFetchedResultsController to display dataset of 50 000 items (Contacts). It is similar to Contacts screen of the Phone application. The search filters the items that contain search term in first or last name.
 
 [![](http://lukagabric.com/wp-content/uploads/2013/06/LargeDatasetSample.png)](http://lukagabric.com/wp-content/uploads/2013/06/LargeDatasetSample.png)
 
