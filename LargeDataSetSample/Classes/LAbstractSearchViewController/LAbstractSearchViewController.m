@@ -350,6 +350,9 @@
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
+    _filteredObjects = nil;
+    _filteredResults = [NSMutableDictionary new];
+    
     [_tableView beginUpdates];
 }
 
