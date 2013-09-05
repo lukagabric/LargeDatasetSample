@@ -27,6 +27,7 @@
 - (void)filterContentForSearchText:(NSString *)searchText scope:(NSInteger)scope;
 - (void)configureCell:(UITableViewCell *)cell forTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)entityName;
+- (NSArray *)sortDescriptors;
 - (NSArray *)sortKeys;
 - (NSString *)mainTableSectionNameKeyPath;
 - (NSString *)mainTableCache;

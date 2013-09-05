@@ -59,6 +59,12 @@
 }
 
 
+- (NSArray *)sortDescriptors
+{
+    return nil;
+}
+
+
 - (NSArray *)sortKeys
 {
     return nil;
@@ -111,30 +117,48 @@
 {
     if (_fetchedResultsController) return _fetchedResultsController;
     
+    //delete cache
     [NSFetchedResultsController deleteCacheWithName:[self mainTableCache]];
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    //request
+    NSFetchRequest *fetchRequest = [NSFetchRequest new];
     
+    //entity
     NSEntityDescription *entity = [NSEntityDescription entityForName:[self entityName] inManagedObjectContext:dataContext];
     fetchRequest.entity = entity;
     
+    //predicate
     NSPredicate *predicate = [self frcPredicate];
     if (predicate)
         fetchRequest.predicate = predicate;
     
-    NSMutableArray *sortDescriptors = [NSMutableArray new];
+    //sort descriptors
+    NSArray *sortDescriptors = [self sortDescriptors];
     
-    for (NSString *key in [self sortKeys])
+    if (!sortDescriptors || [sortDescriptors count] == 0)
     {
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:key ascending:YES];
-        [sortDescriptors addObject:sortDescriptor];
+        NSArray *sortKeys = [self sortKeys];
+        
+        if (sortKeys && [sortKeys count] > 0)
+        {
+            NSMutableArray *descriptors = [NSMutableArray new];
+            
+            for (NSString *key in sortKeys)
+            {
+                NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:key ascending:YES];
+                [descriptors addObject:sortDescriptor];
+            }
+            
+            sortDescriptors = [NSArray arrayWithArray:descriptors];
+        }
     }
     
-    if ([sortDescriptors count] > 0)
-        fetchRequest.sortDescriptors = [NSArray arrayWithArray:sortDescriptors];
+    fetchRequest.sortDescriptors = sortDescriptors;
     
+    //batch size
     fetchRequest.fetchBatchSize = [self fetchBatchSize];
     
+    //fetched results controller
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                     managedObjectContext:dataContext
                                                                       sectionNameKeyPath:[self mainTableSectionNameKeyPath]
