@@ -125,12 +125,12 @@
     
     //entity
     NSEntityDescription *entity = [NSEntityDescription entityForName:[self entityName] inManagedObjectContext:dataContext];
-    fetchRequest.entity = entity;
+    [fetchRequest setEntity:entity];
     
     //predicate
     NSPredicate *predicate = [self frcPredicate];
     if (predicate)
-        fetchRequest.predicate = predicate;
+        [fetchRequest setPredicate:predicate];
     
     //sort descriptors
     NSArray *sortDescriptors = [self sortDescriptors];
@@ -153,10 +153,10 @@
         }
     }
     
-    fetchRequest.sortDescriptors = sortDescriptors;
+    [fetchRequest setSortDescriptors:sortDescriptors];
     
     //batch size
-    fetchRequest.fetchBatchSize = [self fetchBatchSize];
+    [fetchRequest setFetchBatchSize:[self fetchBatchSize]];
     
     //fetched results controller
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
