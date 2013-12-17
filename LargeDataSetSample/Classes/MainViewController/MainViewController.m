@@ -22,11 +22,13 @@
 
 - (void)loadData
 {
+    __weak typeof(self) weakSelf = self;
+    
     [SimpleLoadingView showLoadingOnView:self.view];
     
     dispatch_async(dispatch_get_main_queue(), ^(void) {
-        [self displayData];
-        [SimpleLoadingView hideLoadingFromView:self.view];
+        [weakSelf displayData];
+        [SimpleLoadingView hideLoadingFromView:weakSelf.view];
     });
 }
 
